@@ -1,0 +1,37 @@
+// @media only screen and (max-width: 640px) and (orientation: portrait) {
+//     body { padding: 10px !important }
+//     .test { background: blue !important }
+// }
+
+// /* Small screen */
+// @media only screen and (min-device-width: 320px) and (max-device-width: 479px) and (orientation: portrait) {
+//     body { background: blue !important }
+//     .test { background: blue !important }
+// }
+
+// // /* iPhone landscape and iPad portrait */
+// // @media only screen and (max-device-width: 480px) and (orientation: landscape),
+// // @media only screen and (max-device-width: 640px) and (orientation: portrait)  {
+// //     body { 
+// //       background: red !important 
+// //       -webkit-text-size-adjust:none; 
+// //     }
+// // }
+
+// @media only screen and (max-device-width: 480px) and (orientation: landscape) {
+//     body { background: red !important }
+//     .test { background: red !important }
+// }
+
+@media screen {
+  .selector {  /* ruleset inside nested media - top level extend works */
+    background: blue;
+  }
+  @media (min-device-width: 320px) {
+      @media (minmax-device-width: 479px) {
+        .selector {  /* ruleset inside nested media - top level extend works */
+          background: red;
+        }
+      }
+  }
+}
