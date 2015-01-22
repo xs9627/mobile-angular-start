@@ -23,12 +23,16 @@ module.exports = function(config) {
   config.weinre.boundHost = 'localhost';
 
   // Set to false to disable it:
-   config.weinre = false;
+   //config.weinre = false;
     
   // 3rd party components
   // config.vendor.js.push('.bower_components/lib/dist/lib.js');
   // config.vendor.fonts.push('.bower_components/font/dist/*');
   config.vendor.js.push('./bower_components/angular-i18n/angular-locale_zh-cn.js');
   config.vendor.js.push('./bower_components/angular-bootstrap/ui-bootstrap-tpls.js');
+    config.vendor.js.push('./bower_components/jquery/dist/jquery.min.js');
+    config.vendor.js.push('./bower_components/gsap/src/minified/TweenMax.min.js');
+    config.vendor.js.push('./bower_components/ScrollMagic/js/jquery.scrollmagic.min.js');
+    config.vendor.js.push('./bower_components/ScrollMagic/js/jquery.scrollmagic.debug.js');
   config.vendor.fonts.push('./bower_components/bootstrap/fonts/*');
 };
